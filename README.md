@@ -2,8 +2,7 @@
 Bu proje, satranç açılışlarını öğrenmek ve kullanıcılar arasında stratejik fikir alışverişini sağlamak amacıyla geliştirilmiş bir web uygulamasıdır. Kullanıcılar sisteme kayıt olabilir, giriş yapabilir, açılışları inceleyebilir ve kendi stratejik yorumlarını paylaşabilirler.
 
 ## 📁 Erişim
-Herhangi bir özel kurulum gerekmez. Proje PHP destekli bir sunucu üzerinde çalışacak şekilde geliştirilmiştir. Github Pages aracılığıyla ulaşabilirsiniz. <br>
-[Github Pages]()<br>
+Herhangi bir özel kurulum gerekmez. Proje PHP destekli bir sunucu üzerinde çalışacak şekilde geliştirilmiştir. Veritabanını kurup includes/db.php içindeki veritabanı bağlantı bilgilerini kendi ortamınıza göre düzenlemeniz yeterlidir. <br>
 [Demo Videosu](https://www.youtube.com/watch?v=3bnkE2M5e94)<br><br>
 
 ## 🚀 Özellikler
@@ -19,10 +18,10 @@ Herhangi bir özel kurulum gerekmez. Proje PHP destekli bir sunucu üzerinde ça
 ✅ Güvenli oturum açma / kapatma<br><br>
 
 ## 🛠️ Kullanılan Teknolojiler
-**Frontend**: HTML, CSS  <br>
+**Frontend**: HTML, CSS, JS  <br>
 **Backend**: PHP  <br>
 **Veritabanı**: MySQL (tablolar: users, comments, openings)  <br>
-**API**: [Lichess Opening Explorer API](https://explorer.lichess.ovh/masters?play=e4,e5,Nf3,Nc6)<br><br>
+**API**: [Lichess Opening Explorer API](https://explorer.lichess.ovh/masters)<br><br>
 
 ## 📸 Ekran Görüntüsü
 ### Ana Sayfa
