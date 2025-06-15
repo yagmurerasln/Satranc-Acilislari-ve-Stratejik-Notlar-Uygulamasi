@@ -1,0 +1,22 @@
+/* Container flex ile yatay düzen */
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding-top: 20px; /* Ek üst boşluk */
+}
+.chessboard-wrapper {
+  width: 480px;
+  height: 480px;
+  border: 2px solid #333;
+  flex-shrink: 0;
+  overflow:visible; /* Bu olabilir mi? */
+}
+div#board.board {
+  visibility: visible !important;
+  display: grid !important;
+}
+
+
+

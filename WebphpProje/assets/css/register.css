@@ -1,0 +1,105 @@
+/* register.css */
+
+
+
+/* Başlık */
+main h2 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #c2dbf7;
+}
+
+form {
+    max-width: 400px; /* Form genişliği */
+    margin: 2rem auto; /* Ortalamak için otomatik yatay margin */
+    padding: 2.5rem 2rem;
+    background: #ffffff; /* Beyaz arka plan */
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(44, 62, 80, 0.15);
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease;
+}
+form:hover {
+    box-shadow: 0 12px 30px rgba(44, 62, 80, 0.25);
+}
+
+/* Etiketler */
+form label {
+    display: block;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Giriş alanları */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1.8px solid #91b7dd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: #2c3e50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(44, 62, 80, 0.4);
+}
+
+/* Hata mesajı */
+p[style*="color:red"] {
+    background-color: #f8d7da;
+    color: #842029;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Kayıt butonu */
+form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1b2733;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(44, 62, 80, 0.2);
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    color: #dce4f8;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    main {
+        padding: 2rem 1rem;
+        margin: 1rem auto 20px;
+    }
+}

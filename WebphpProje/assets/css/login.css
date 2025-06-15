@@ -1,0 +1,395 @@
+/* login.css - Bootstrap ile Güncellenmiş */
+
+/* Body ve HTML */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ana Container */
+.login-page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    color: #2c3e50;
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(234, 102, 216, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Başlık */
+.login-container h2 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #452c50;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.login-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, #4b1773, #764ba2);
+    border-radius: 2px;
+}
+
+/* Form Grup */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Input Alanları */
+.form-control {
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 1;
+}
+
+.form-control:focus {
+    border-color: #ff60e2;
+    box-shadow: 0 0 0 0.25rem rgba(251, 29, 255, 0.25);
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Input İkonları */
+.input-group {
+    position: relative;
+}
+
+.input-group .form-control {
+    padding-left: 50px;
+}
+
+.input-group::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    z-index: 2;
+    opacity: 0.6;
+}
+
+.input-group.username::before {
+    content: '👤';
+    font-size: 18px;
+}
+
+.input-group.password::before {
+    content: '🔒';
+    font-size: 18px;
+}
+
+/* Buton */
+.btn-primary {
+    background: linear-gradient(45deg, #621e63, #764ba2);
+    border: none;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(230, 23, 161, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+.btn-outline-primary {
+  color: #eab7ef; /* Kayıt Ol yazı rengi (mavi ton) */
+    border-color: #541856 !important;
+
+}
+
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus {
+  color: #3e1c57; /* Hover yazı rengi */
+  background-color: #d9b0d7; /* Hover arka plan rengi */
+  border-color: #532945; /* İstersen border rengini de değiştirebilirsin */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: linear-gradient(45deg, #2c053e, #6a4190);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(183, 102, 234, 0.4);
+}
+.btn-outline-secondary {
+  color: #dbc7e9; /* Örnek: kırmızı */
+    border-color: #541856 !important;
+
+}
+
+.btn-outline-secondary:hover, 
+.btn-outline-secondary:focus {
+  color: #3e1c57; /* Hover ve focus için farklı renk */
+  border-color: #532945; /* İstersen border rengini de değiştirebilirsin */
+}
+
+
+/* Alert Mesajları */
+.alert {
+    border-radius: 12px;
+    border: none;
+    padding: 15px 20px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.alert-danger {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+}
+
+.alert-success {
+    background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+    color: white;
+}
+
+/* Navbar ve Linkler */
+.auth-links {
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-links a {
+    color: #ac66ea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.auth-links a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animasyonlar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Remember Me Checkbox */
+.form-check {
+    margin: 1.5rem 0;
+}
+
+.form-check-input {
+    border-radius: 4px;
+    border: 2px solid #e9ecef;
+}
+
+.form-check-input:checked {
+    background-color: #c87de1;
+    border-color: #541856;
+}
+
+.form-check-label {
+    color: #452c50!important;
+    font-weight: 500;
+}
+
+/* Sosyal Giriş Butonları */
+.social-login {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-login hr {
+    margin: 1.5rem 0;
+    border-color: #e9ecef;
+}
+
+.btn-social {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 576px) {
+    .login-container {
+        padding: 2rem 1.5rem;
+        margin: 10px;
+    }
+    
+    .login-container h2 {
+        font-size: 1.6rem;
+    }
+    
+    .form-control {
+        padding: 12px 15px;
+    }
+    
+    .btn-primary {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .form-control {
+        font-size: 0.9rem;
+    }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn-primary.loading .loading-spinner {
+    display: inline-block;
+}
+
+/* Giriş Başarılı Animasyonu */
+.success-checkmark {
+    display: none;
+    color: #28a745;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+    animation: checkmark 0.6s ease-in-out;
+}
+
+@keyframes checkmark {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

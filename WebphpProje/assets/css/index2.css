@@ -1,0 +1,85 @@
+/* index2.css */
+
+/* Genel Ayarlar */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ana Konteyner */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 4rem;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 30px rgba(144, 19, 254, 0.5);
+}
+
+/* Başlık */
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
+
+/* Açıklama Paragrafı */
+.container p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+/* Linkler */
+.container a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #4a90e2;
+    background-color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.container a:hover {
+    background-color: #4a90e2;
+    color: #fff;
+    box-shadow: 0 8px 30px rgba(74, 144, 226, 0.7);
+    transform: translateY(-3px);
+}
+
+/* Mobil Desteği */
+@media (max-width: 480px) {
+    .container {
+        padding: 2rem 2rem;
+        max-width: 320px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .container a {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+        margin: 0 5px;
+    }
+}

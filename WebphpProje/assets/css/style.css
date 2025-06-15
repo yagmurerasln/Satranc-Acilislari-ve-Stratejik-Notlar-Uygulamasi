@@ -1,0 +1,348 @@
+/* WebphpProje/assets/css/style.css - Bootstrap ile Güncellenmiş */
+
+/* Genel Stiller */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Ana container */
+.main-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+/* Başlık Stilleri */
+h1 {
+  color: #2c3e50;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+/* Card Stilleri */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.card .card-text {
+  color: #74438f !important; 
+}
+.card .card-title{
+  color: #560d7d !important;
+}
+.card-body .form-label{
+  color: #560d7d !important;
+}
+.mt-4{
+  color: #dac3e6 !important;
+}
+.text-muted{
+  color: #560d7d !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: rgb(87, 61, 126);
+  font-weight: 600;
+  border: none;
+}
+
+/* Buton Stilleri */
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-block; /* inline-block yaparak genişlik ve yükseklik daha iyi hesaplanır */
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+  pointer-events: none; /* Hover etkisini engellemesin */
+  z-index: 1; /* Yazıların önünde görünmesi için */
+}
+.vsc-initialized {
+  overflow: visible !important;
+  position: relative; /* Pseudo elementin konumu için önemli */
+  z-index: 0;
+}
+
+
+.btn > * {
+  position: relative;
+  z-index: 2; /* Yazı ve içeriğin pseudo-elementin üstünde görünmesi için */
+}
+
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.btn-warning {
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+}
+
+.btn-danger {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+
+.btn-info {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+/* Tablo Stilleri */
+.table {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: rgb(100, 57, 134);
+  border: none;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(102, 126, 234, 0.1);
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  padding: 12px 15px;
+}
+
+/* Form Stilleri */
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+/* Alert Stilleri */
+.alert {
+  border-radius: 10px;
+  border: none;
+  padding: 15px 20px;
+}
+
+.alert-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  color: white;
+}
+
+.alert-danger {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+}
+
+.alert-info {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  color: white;
+}
+
+/* Satranç Tahtası Stilleri */
+.chessboard-wrapper {
+  flex-shrink: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+
+.dark {
+  background-color: #b58863;
+}
+
+.square:hover {
+  opacity: 0.8;
+}
+
+.square img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.square img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Layout */
+.chess-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Badge Stilleri */
+.badge {
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+  .chess-detail-container {
+    flex-direction: column;
+  }
+  
+  .chessboard-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .main-container {
+    margin: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .table-responsive {
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .board {
+    max-width: 320px;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Özel Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+}
